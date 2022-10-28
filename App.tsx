@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect, useRef } from 'react';
 import { Animated, Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import ImageText from './screens/ImageText';
 
 export default function App() {
   const fadeAnim = useRef(new Animated.Value(0)).current
@@ -71,7 +72,7 @@ export default function App() {
 
   return (
     <Animated.View style={styles.container}>
-      <Animated.View style={{
+      {/* <Animated.View style={{
         opacity: fadeAnim
       }}>
         <Text>Welcome to Animation React Native</Text>
@@ -150,7 +151,8 @@ export default function App() {
         turnLeft()
       }}>
         <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 20 }}>Left</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+      <ImageText />
       <StatusBar style="auto" />
     </Animated.View>
   );
